@@ -3,4 +3,4 @@
 km = float(input('Quantos KM percorreu com o carro alugado? '))
 tempo = float(input('Por quanto tempo voce alugou o carro? '))
 aluguel = (60 * tempo) + (km * 0.15)
-print('O aluguel do seu carro ficou: {}'.format(aluguel))
+print('O aluguel do seu carro ficou: {:.2f}'.format(aluguel))
