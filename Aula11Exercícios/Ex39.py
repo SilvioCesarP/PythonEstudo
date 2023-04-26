@@ -3,10 +3,14 @@
 #Mostar o tempo que falta ou o tempo que passou do prazo
 
 ano = int(input('o ano de seu nascimento: '))
-alistamento = +(ano - 2023)
-if alistamento > 18:
-    print('Voce ainda vai ter que se alistar para o exercito em {} anos'.format((alistamento- 18)))
-elif alistamento == 18:
-    print('Você terá que se alistar esse ano, PARABENS!!')
+idade = 2023 - ano
+novo = 18 - idade
+novo2 = idade - 18
+print('Sua idade é {} em 2023'.format(idade))
+
+if idade < 18:
+    print('Voce ainda vai ter que se alistar para o exercito em {} anos'.format(novo))
+elif idade == 18:
+    print('PARABENS ESSE ANO OU VC VAI SE ALISTAR OU JA SE ALISTOU!!!')
 else:
-    print('Voce tem pendencias com o exercito e passou {} do prazo de alistamento'.format(alistamento- 18))
+    print('Passou seu prazo de se alistar! Cuidado faz {} anos que venceu!'.format(novo2))
