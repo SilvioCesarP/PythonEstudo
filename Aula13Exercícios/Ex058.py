@@ -5,14 +5,22 @@
 #Mostre quantas tentativas
 
 import random
-gerado = random.randint(0, 1)
-num = int(input('Digite um numero de 0 a 10: '))
-while  num != gerado:
+gerado = random.randint(0, 10)
+acertou = False
+tent = 0
+while not acertou:
+    num = int(input('Digite um numero de 0 a 10: '))
     if num > gerado:
         print('Errou, o numero gerado é menor, TENTE DENOVO: ')
+        tent += 1
     elif num < gerado:
         print('Errou, o numero gerado é maior, TENTE DENOVO: ')
+        tent += 1
     elif num > 10 or num < 0:
         print('Numero inválido, apenas numeros inteiros e entre 0 e 10, TENTE NOVAMENTE: ')
-print('ACERTOU!!!')
+        tent += 0
+    elif num == gerado:
+        acertou = True
+
+print('ACERTOU!!! em {} tentativas'.format(tent))
     
