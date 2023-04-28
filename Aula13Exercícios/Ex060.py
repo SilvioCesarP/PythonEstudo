@@ -3,14 +3,9 @@
 
 num = float(input('Digite um numero: '))
 x = num
-while not x == 1:
-    if x == 0:
-        x = num
-        c = x * num
-    else:
-    x = (num - 1)
-    c = x * num
-
-print(c)
-
-
+fac = 1
+while x > 1:
+         fac = x * fac
+         x = x - 1
+        
+print('O fatorial de {:.2f} é {:.2f}'.format(num, fac))
