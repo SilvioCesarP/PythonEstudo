@@ -16,13 +16,12 @@ while True:
     count += 1
     if count == 1:
         barato = valor
+        produto = nome
     elif valor <= barato:
         barato = valor
         produto = nome
-
     if valor > 1000:
         maior += 1
-    
     resp = ' '
     while resp not in 'SN':
         resp = str(input('Quer continuar a fazer suas compras?[S/N] ')).strip().upper()[0]
