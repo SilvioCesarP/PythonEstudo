@@ -21,6 +21,7 @@ while True:
     if morreu == 0:
         break
     elif R1 == 2 or R1 == 3:
+        morreu = 0
         print((perdeu))
         break
     elif R1 == 1:
@@ -37,22 +38,28 @@ while True:
             if R2 == 3 or R2 == 2:
                 while True:
                     if R2 == 2:
-                        n1 = 'LOBO'
-                        n2 = 'GALINHA'
-                        n3 = 'VACA'
+                        n1 = 1 #'LOBO'
+                        n2 = 2 #'GALINHA'
+                        n3 = 3 #'VACA'
                     elif R2 == 3:
-                        n1 = 'LOBO'
-                        n2 = 'VACA'
-                        n3 = 'GALINHA'
-                    print('Apos a travessia temos:{n1} e {n2} junto, e {n3} do outro')
-                    n1 = 1
-                    n2 = 2
-                    n3 = 3 
-                    R3 = int(input(jogada))
+                        n1 = 1#'LOBO'
+                        n2 = [3, 'VACA']
+                        n3 = 2#'GALINHA'
+                    print(f'Apos a travessia temos:{n1} e {n2} junto, e {n3} do outro')
+                    R3 = int(input((jogada).format(n1, n2, n3)))
                     if morreu == 0:
                         break
-                    if R2 == 2:
+                    elif R3 == n3:
                         break
+                    elif R3 == n2:
+                        print(perdeu)
+                        morreu = 0
+                        break
+                    elif R3 == n1:
+                        n3= 2
+
+
+                        
 
 
 
