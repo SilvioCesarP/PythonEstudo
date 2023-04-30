@@ -13,8 +13,8 @@ morreu = 1
 while True:
     if morreu == 0:
         break
-    resp1 = str(input('QUAL ANIMAL ATRAVESSERÀ PRIMEIRO?[1, 2, 3]'))
-    if resp1 == 2 or 3:
+    resp1 = int(input('QUAL ANIMAL ATRAVESSERA PRIMEIRO?[1, 2, 3]: '))
+    if resp1 == 2 == 3:
         print('NÃOOOO, VOCE DEIXOU O LOBO SOZINHO COM OS ANIMAIS, ELE COMEU ELES DE TANTA FOME!!!')
         break     
     elif resp1 == 1:
@@ -22,12 +22,12 @@ while True:
             if morreu == 0:
                 break
             print('Otimo, agora tem um lobo do outro lado e a galinha e a vaca deste lado')
-            resp2 = str(input('QUAL ANIMAL ATRAVESSERÁ?'))
+            resp2 = int(input('QUAL ANIMAL ATRAVESSERÁ?'))
             
             if resp2 == 2:
                 while True:
                     print('Otimo, agora tem um LOBO e uma GALINHA de um lado e uma VACA do outro')
-                    resp3 = str(input('QUAL ANIMAL ATRAVESSERÁ?'))
+                    resp3 = int(input('QUAL ANIMAL ATRAVESSERÁ?'))
                     if resp3 == 3:
                         print('NÃOOOO, VOCE DEIXOU O LOBO SOZINHO COM OS ANIMAIS, ELE COMEU ELES DE TANTA FOME!!!')
                         morreu = 0
@@ -40,7 +40,7 @@ while True:
                 print('Otimo, agora tem um LOBO e uma VACA de um lado e uma GALINHA do outro')
             if resp2 == 1:
                 resp = 1
-                    
+print('FIM')                   
 
             
         
