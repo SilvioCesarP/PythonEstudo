@@ -7,57 +7,53 @@ print('BEM VINDO AO JOGUINHO DO SILVIO')
 print('-='* 20)
 print('VOCE É AMIGO DE TODOS OS ANIMAIS, E CUIDA DE UM LOBO, UMA VACA E UMA GALINHAZ\nPOREM PRECISA IR NA CIDADE COMPRAR COMIDA POIS SEU LOBO ESTA MORRENDO DE FOME')
 print('PARA CHEGAR NA CIDADE PRECISA ATRAVESAR UM RIO, VOCÊ SÓ TEM UM BOTE QUE CABE APENAS 2 PASSAGEIROS\nSE DEIXAR O LOBO SOZINHO COM A VACA OU A GALINHA ELE VAI COMER ELAS :C')
-print('Sendo você o unico que consegue dirigir o bote, vamos considerar cada um com um numero\nLOBO[1]\nGALINHA[2]\nVACA[3]\nVOCE[4]')
-jogada = 'QUAL ANIMAL ATRAVESSERÁ?\n LOBO[1]\nGALINHA[2]\nVACA[3]\nRESPOSTA: '
+print('VOCE SENDO O UNICO QUE CONSEGUE DIRIGIR A CANOA, ESCOLHA ')
+n1 = 'LOBO'
+n3 = 'VACA'
+n2 = 'GALINHA'
+jogada = (('QUAL ANIMAL ATRAVESSERÁ?\n{}[1]\n{}[2]\n{}[3]\nRESPOSTA: '))
 perdeu = 'NÃOOOO, VOCE DEIXOU O LOBO SOZINHO COM OS ANIMAIS, ELE COMEU ELES DE TANTA FOME!!!'
 morreu = 1
 
+
 while True:
+    R1 = int(input((jogada).format(n1, n2, n3)))
     if morreu == 0:
         break
-    resp1 = int(input('QUAL ANIMAL ATRAVESSERA PRIMEIRO?[1, 2, 3]: '))
-    if resp1 == 2 == 3:
-        print(perdeu)
-        break     
-    elif resp1 == 1:
+    elif R1 == 2 or R1 == 3:
+        print((perdeu))
+        break
+    elif R1 == 1:
+        n1 = 'LOBO'
+        n2 = 'GALINHA'
+        n3 = 'VACA'
         while True:
+            print(f'Apos a travessia temos:{n1} de um lado e do outro a {n2} junto com a {n3}')
+            R2 = int(input((jogada).format(n1, n2 ,n3)))
             if morreu == 0:
                 break
-            print('Otimo, agora tem um LOBO de um lada e a GALINHA e a VACA do outro lado')
-            resp2 = int(input(jogada))
-            if resp2 == 2 == 3:
-                if resp2 == 2:
-                    n1 = 'LOBO'
-                    n2 = 'GALINHA'
-                    n3 = 'VACA'
-                elif resp2 == 3:
-                    n1 = 'LOBO'
-                    n2 = 'VACA'
-                    n3 = 'GALINHA'
-                while True:
-                    print('Otimo, agora tem um {n1} e uma {n2} de um lado e uma {n3} do outro')
-                    resp3 = int(input(jogada))
-                    if resp3 == 3:
-                        print(perdeu)
-                        morreu = 0
-                        break
-                    if resp3 == 1:
-                        print('Voce moveu o LOBO junto a GALINHA, deixando a VACA do outro lado')
-                    if resp3 == 2:
-                        break
-        
-            if resp2 == 1:
+            if R2 == 1:
                 break
+            if R2 == 3 or R2 == 2:
+                while True:
+                    if R2 == 2:
+                        n1 = 'LOBO'
+                        n2 = 'GALINHA'
+                        n3 = 'VACA'
+                    elif R2 == 3:
+                        n1 = 'LOBO'
+                        n2 = 'VACA'
+                        n3 = 'GALINHA'
+                    print('Apos a travessia temos:{n1} e {n2} junto, e {n3} do outro')
+                    n1 = 1
+                    n2 = 2
+                    n3 = 3 
+                    R3 = int(input(jogada))
+                    if morreu == 0:
+                        break
+                    if R2 == 2:
+                        break
 
 
 
-print('FIM')                   
 
-            
-        
-            
-
-
-
-
-    
