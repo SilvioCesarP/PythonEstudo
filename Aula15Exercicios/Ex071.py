@@ -1,27 +1,28 @@
 #Leia um valor inteiro
 #Mostre esse valor em cedula
-ced1 = 1
-ced5 = 5
-ced10 = 10
-ced20 = 20
-ced50 = 50
-ced100 = 100
-ced200 = 200
-resto = 0
+
+ced = 50
+count = 0
 
 valor = int(input('Digite o valor que quer sacar! '))
+total = valor
 while True:
-    if valor // 200 > 1:
-        ced200 = valor // 200
-        resto = valor -(ced200*200)
-    if valor/100  > 0:
-        ced100 = valor / 100
-    if valor / 50 == 0:
-        ced50 = valor/50
-    if valor / 20 == 0:
-        ced20 = valor/20
-    print(ced200,ced100, ced50, ced20)
-    break
+    if total >= ced:
+        total -= ced
+        count += 1
+    else:
+        if count > 0:
+            print(f'Voce recebe {count} cédulas de {ced}')
+            count = 0
+        if ced == 50:
+            ced =20
+        elif ced == 20:
+            ced = 10
+        elif ced == 10:
+            ced = 1
+        if total == 0:
+            break
 
+print('Obrigado por usar o melhor banco da cidade')
 
 
