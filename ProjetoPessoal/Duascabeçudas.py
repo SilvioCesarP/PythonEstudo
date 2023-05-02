@@ -22,6 +22,7 @@ while True:
         break      
     if reset == 1:
         reset = 0
+    print(f'Temos a seguinte situação: o {n1[1]}, a {n2[1]} e a {n3[1]}, e claro VOCÊ!')
     R1 = int(input((jogada).format(n1[1], n2[1], n3[1])))
     if R1 == 2 or R1 == 3:
         morreu = 0
@@ -52,50 +53,35 @@ while True:
                         n3 = [2, 'GALINHA']
                     print(f'Apos2 a travessia, temos:{n1[1]} e {n2[1]} juntos e a {n3[1]} do outro lado')
                     R3 = int(input((jogada).format(n1[1], n2[1], n3[1])))#feito
-                    if R3 == n3[0]:
+                    if R3 == 2:
                         break
-                    elif R3 == n2[0]:
-                        print(perdeu)
+                    elif R3 == 3:
                         morreu = 0
+                        print(perdeu)
                         break
-                    elif R3 == n1[0]:
+                    elif R3 == 1:
                         while True:
                             if morreu == 0 or vitoria == 1:
                                  break
                             print(f'Apos3 a travessia, temos: {n2[1]} de um lado e no outro o {n1[1]} e a {n3[1]}')
                             resp4 = int(input((jogada).format(n1[1], n2[1], n3[1])))
-                            if R2 == 2:
-                                if resp4 == n2[0]:
-                                    reset = 1
-                                    break
-                                if resp4 == n1[0]:
-                                    break
-                                if resp4 == n3[0]:
-                                    while True:
-                                        print(f'Apos4 a travessia, temos:{n2[1]} e {n3[1]} de um lado e {n1[1]} do outro')
-                                        resp5 = int(input((jogada).format(n1[1], n2[1], n3[1])))
-                                        if resp5 == n2[0] or resp5 == n3[0]:
-                                            break
-                                        elif resp5 == n1[0]:
-                                            print('PARABENS!!')
-                                            vitoria = 1
-                                            break
-                            elif R2 == 3:
-                                if resp4 == n2[0]:
-                                    reset = 1
-                                    break
-                                if resp4 == n1[0]:
-                                    break
-                                if resp4 == n3[0]:
-                                    while True:
-                                        print(f'Apos4 a travessia, temos:{n2[1]} e {n3[1]} de um lado e {n1[1]} do outro')
-                                        resp5 = int(input((jogada).format(n1[1], n2[1], n3[1])))
-                                        if resp5 == n2[0] or resp5 == n3[0]:
-                                            break
-                                        elif resp5 == n1[0]:
-                                            print('PARABENS!!')
-                                            vitoria = 1
-                                            break
+                            if resp4 == 2:
+                                morreu = 0
+                                print(perdeu)
+                                break
+                            if resp4 == 1:
+                                break
+                            if resp4 == 3:
+                                while True:
+                                    print(f'Apos4 a travessia, temos:{n2[1]} e {n3[1]} de um lado e {n1[1]} do outro')
+                                    resp5 = int(input((jogada).format(n1[1], n2[1], n3[1])))
+                                    if resp5 == n2[0] or resp5 == n3[0]:
+                                        break
+                                    elif resp5 == n1[0]:
+                                        print('PARABENS!!')
+                                        vitoria = 1
+                                        break
+                           
 print('FIM')
 
                             
