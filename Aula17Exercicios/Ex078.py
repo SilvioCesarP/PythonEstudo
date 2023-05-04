@@ -19,5 +19,12 @@ for c in range(0, 5):
 
 
 print(f'Os numeros da lista são: {num}')
-print(f'O numero maior desta lista é {maior} e está na posição {num.index(maior)}')
+
+print(f'O numero maior desta lista é {maior}', end='')
+for i , v in enumerate(num):
+    if v == maior:
+        print(f' e a posição é {i}')
 print(f'O numero menor desta lista é {menor}')
+for i, v in enumerate(num):
+    if v == menor:
+        print(f' e a posição é {i}')
