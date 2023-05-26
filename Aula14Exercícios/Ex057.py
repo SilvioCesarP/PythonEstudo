@@ -3,6 +3,6 @@
 #Mostre o resultado
 
 sexo = str(input('Qual o seu sexo [M/F]? ')).strip().upper()[0]
-while sexo != 'F'or'M':
+while sexo == 'F'or'M':
     sexo = str(input('Erro, informe seu SEXO [M/F]: '))[0]
 print('Cadastro realizado com sucesso')

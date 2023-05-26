@@ -1,7 +1,7 @@
 #Leia um numero e a opção do jogador(impar ou par)
-#Gere uim numero aleatório
+#Gere um numero aleatório
 #Compare o numero escolhido com o numero aleatorio
-#Mostre se perdeu pou ganhou
+#Mostre se perdeu ou ganhou
 #Conte as vitorias consecutivas e so pare quando o jogador perder
 
 import random
